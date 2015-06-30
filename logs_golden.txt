@@ -1,0 +1,10 @@
+echo 127.0.0.1
+echo announce
+announce address 127.0.0.1
+echo withdraw
+withdraw address 127.0.0.1
+echo 127.0.0.2
+echo announce
+announce address 127.0.0.2
+echo
+withdraw address 127.0.0.2

@@ -43,17 +43,17 @@ function errcho() {
 }
 
 read IP
-# 1) create them so that binding can happen -- crt addr
-echo ifconfig lo:$index $IP up
-errcho "create address $IP"
-echo "OK"
-
-read COMMAND
-do_announce $IP
 function finish() {
     do_withdraw $IP
 }
-trap finish EXIT
+errcho "echo $IP"
+echo "OK"
 
 read COMMAND
+errcho "echo $COMMAND"
+trap finish EXIT
+do_announce $IP
+
+read COMMAND
+errcho "echo $COMMAND"
 exit 0
